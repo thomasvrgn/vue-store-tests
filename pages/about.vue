@@ -13,8 +13,8 @@ export default Vue.extend({
     inputContent: ''
   }),
   mounted: function (): void {
-    console.log('test', this.$store)
-    this.inputContent = this.$store.state.input.inputContent
+    console.log('test', this.$store.getters.getInputContent, this.$store.getters)
+    this.inputContent = this.$store.getters['input/getInputContent']
   }
 })
 </script>
